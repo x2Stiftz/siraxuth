@@ -68,20 +68,14 @@ const handleNavbarScroll = () => {
 // Mobile Menu
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-link');
 
-menuBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+const toggleMenu = () => {
     menuBtn.classList.toggle('active');
     navLinks.classList.toggle('active');
-});
+    document.body.classList.toggle('menu-open');
+};
 
-// ปิด menu เมื่อคลิก nav link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        menuBtn.classList.remove('active');
-        navLinks.classList.remove('active');
-    });
-});
 
 // Smooth Scroll with Offset
 const smoothScroll = (target, duration) => {

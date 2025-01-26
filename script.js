@@ -76,10 +76,6 @@ const toggleMenu = () => {
     document.body.classList.toggle('menu-open');
 };
 
-menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
 
 // Smooth Scroll with Offset
 const smoothScroll = (target, duration) => {

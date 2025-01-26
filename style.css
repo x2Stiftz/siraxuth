@@ -866,6 +866,21 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .glitch {
+        font-size: 3rem;
+    }
+
     .about-content {
         flex-direction: column;
         text-align: center;
@@ -877,16 +892,8 @@ footer {
         margin: 0 auto 40px;
     }
 
-    .frame-decoration {
-        display: none; /* ซ่อนกรอบตกแต่งในหน้าจอขนาดเล็ก */
-    }
-    
-    .about-text {
-        width: 100%;
-    }
-
     .experience-items {
-        justify-content: center;
+        grid-template-columns: 1fr;
     }
 }
 

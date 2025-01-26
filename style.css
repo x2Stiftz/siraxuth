@@ -755,18 +755,22 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 60px;
+        top: 0; /* เปลี่ยนจาก 60px เป็น 0 */
         left: 0;
         width: 100%;
+        height: 100%; /* เพิ่มความสูงเต็มหน้าจอ */
         background-color: white;
         flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: all 0.3s ease;
+        padding: 100px 20px; /* เพิ่มช่องว่างด้านบน */
+        transform: translateX(100%); /* เปลี่ยนเป็น translateX */
+        transition: transform 0.3s ease;
+        z-index: 999;
     }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+}
 
     .nav-links.active {
         transform: translateY(0);
@@ -903,19 +907,19 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .nav-links {
         transform: translateY(-100%);
         opacity: 0;
         pointer-events: none; /* เพิ่มบรรทัดนี้ */
-    }
+/*     }
 
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto; /* เพิ่มบรรทัดนี้ */
-    }
-}
+/*     } */
+/* } */ */ */
 @media (max-width: 480px) {
     .about-image {
         max-width: 300px;

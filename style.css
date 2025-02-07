@@ -934,7 +934,6 @@ footer {
     }
 
     .nav-link {
-        background-color: #2d2d2d;
         color: #e0e0e0;
     }
 
@@ -1051,7 +1050,7 @@ footer {
     .menu-btn__burger,
     .menu-btn__burger::before,
     .menu-btn__burger::after {
-        background-color: #e0e0e0;
+        background-color: #2d2d2d;
     }
 
     /* Footer */
